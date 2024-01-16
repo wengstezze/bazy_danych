@@ -1,0 +1,2 @@
+# bazy_danych
+projekty.
