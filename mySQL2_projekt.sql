@@ -59,3 +59,15 @@ JOIN
     osoby o ON w.osoba = o.Id_osoby;
 
 # (4) Utworzyć kwerendę pokazującą listę: nazwisko, imie-liczba wypozyczonych ksiazek
+SELECT 
+    o.Nazwisko,
+    o.Imię,
+    COUNT(w.Id_wypozyczenia) AS LiczbaWypozyczonychKsiazek
+FROM
+    osoby o
+LEFT JOIN
+    wypozyczenia w ON o.Id_osoby = w.osoba
+GROUP BY 
+    o.Nazwisko, o.Imię
+ORDER BY 
+    o.Nazwisko, o.Imię;
