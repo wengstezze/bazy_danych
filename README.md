@@ -1,2 +1,2 @@
-# bazy_danych
-projekty.
+# bazy_danych_MySQL
+pierwszy projekt.
